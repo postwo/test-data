@@ -36,4 +36,5 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
+	jvmArgs('-Xshare:off','-xx:+EnableDynamicAgentLoading') // 테스트 도중 class data sharing 경고, Dynamic loading of agents 경고를 해제하기 위한 jvm옵션
 }
