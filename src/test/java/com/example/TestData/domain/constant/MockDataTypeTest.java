@@ -33,6 +33,7 @@ class MockDataTypeTest {
         MockDataType.MockDataTypeObject result = mockDataType.toObject();
 
         // Then
+        // contains()는 문자열이 특정 단어를 포함하고 있는지 검사하는 메서드
         assertThat(result.toString()).contains("name", "requiredOptions", "baseType");
     }
 
