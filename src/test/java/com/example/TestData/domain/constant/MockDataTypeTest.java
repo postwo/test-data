@@ -15,11 +15,11 @@ class MockDataTypeTest {
         MockDataType mockDataType = MockDataType.STRING;
 
         // when
-        //기본적으로 Enum.toString()은 Enum.name()을 반환
+        // 기본적으로 Enum.toString()은 Enum.name()을 반환
+        // Enum에서 toString()을 재정의하지 않으면, 기본적으로 name()을 반환
         String elementName = mockDataType.toString();
 
         // then
-        System.out.println(elementName);
         assertThat(elementName).isEqualTo(MockDataType.STRING.name());
     }
 
